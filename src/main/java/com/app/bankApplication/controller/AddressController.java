@@ -20,7 +20,6 @@ public class AddressController {
     @PostMapping("/addCustomerAddress")
     public ResponseEntity<String> addCustomerAddress(@RequestBody Address address) {
 
-        System.out.println("Address In Controller " + address);
         String status = addressService.addCustomerAddress(address);
         return new ResponseEntity<>(status, HttpStatus.OK);
     }
