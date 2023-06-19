@@ -1,5 +1,8 @@
-package com.app.bankApplication;
+package com.app.bankApplication.service.serviceImpl;
 
+import com.app.bankApplication.bean.Bank;
+import com.app.bankApplication.dao.BankDao;
+import com.app.bankApplication.service.BankService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,13 +14,7 @@ public class BankServiceImpl implements BankService {
 
     @Override
     public String addBank(Bank bank) {
-
         return bankDao.addBank(bank);
-    }
-
-    @Override
-    public String addAddress(Address address) {
-        return bankDao.addAddress(address);
     }
 }
 

@@ -1,4 +1,4 @@
-package com.app.bankApplication;
+package com.app.bankApplication.bean;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,10 +9,13 @@ import org.springframework.stereotype.Component;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Bank {
+public class Address {
 
+    private int addressId;
+    private String street;
+    private String city;
+    private String state;
+    private int zipCode;
     private int bankId;
-    private String bankName;
-    private String branch;
-    private Address address;
+    private int customerId;
 }
