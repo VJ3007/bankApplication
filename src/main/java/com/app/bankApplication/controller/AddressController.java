@@ -5,10 +5,7 @@ import com.app.bankApplication.service.AddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("address")
@@ -29,5 +26,11 @@ public class AddressController {
 
         String status = addressService.addBankAddress(address);
         return new ResponseEntity<>(status, HttpStatus.OK);
+    }
+    @GetMapping("/getAddress/{addressId}")
+    public ResponseEntity<Address> getAddress(@PathVariable int addressId){
+
+        Address address = addressService.getAddress(addressId);
+        return new ResponseEntity<>(address,HttpStatus.OK);
     }
 }

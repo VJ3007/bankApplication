@@ -7,4 +7,6 @@ public interface AddressService {
     String addCustomerAddress(Address address);
 
     String addBankAddress(Address address);
+
+    Address getAddress(int addressId);
 }

@@ -21,4 +21,9 @@ public class AddressServiceImpl implements AddressService {
     public String addBankAddress(Address address) {
         return addressDao.addBankAddress(address);
     }
+
+    @Override
+    public Address getAddress(int addressId) {
+        return addressDao.getAddress(addressId);
+    }
 }
